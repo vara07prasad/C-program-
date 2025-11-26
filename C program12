@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int n, a = 0, b = 1, c, i;
+
+    printf("Enter the value of N: ");
+    scanf("%d", &n);
+
+    if(n == 1) {
+        printf("The %dth term of Fibonacci series is %d\n", n, a);
+        return 0;
+    }
+    else if(n == 2) {
+        printf("The %dth term of Fibonacci series is %d\n", n, b);
+        return 0;
+    }
+
+    for(i = 3; i <= n; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    printf("The %dth term of Fibonacci series is %d\n", n, b);
+
+    return 0;
+}
